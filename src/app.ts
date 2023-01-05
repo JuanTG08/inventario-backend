@@ -22,9 +22,8 @@ app.use(cors());
 *
 */
 // Importamos las rutas ***
+import index_router from './routes/index.routes';
 
-app.use('/', (req, res) => {
-    res.json({a: "a"})
-})
+app.use('/', index_router);
 
 export default app;
