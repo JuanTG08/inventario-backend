@@ -5,11 +5,14 @@ import cors from 'cors';
 import path from 'path';
 // import authMdlw from './middleware/token.auth.middleware';
 
+// Obtenemos las variables de configuraciones
+import env from './config/config';
+
 // Creamos la variable APP para el inicio del servidor
 const app = express();
 
 // Configuraciones previas
-app.set('port', 8000);
+app.set('port', env.PORT_SERVER);
 
 // Middlewares
 app.use(morgan('dev'));
