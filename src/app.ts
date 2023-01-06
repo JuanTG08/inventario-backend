@@ -4,6 +4,7 @@ import morgan from 'morgan';
 import cors from 'cors';
 import path from 'path';
 // import authMdlw from './middleware/token.auth.middleware';
+import conn from './config/connection';
 
 // Obtenemos las variables de configuraciones
 import env from './config/config';
@@ -18,6 +19,7 @@ app.set('port', env.PORT_SERVER);
 app.use(morgan('dev'));
 app.use(express.json());
 app.use(cors());
+conn();
 
 /*
 *
